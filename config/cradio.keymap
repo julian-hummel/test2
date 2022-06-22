@@ -75,7 +75,7 @@
 		bindings = <
 		&mt QMARK EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCT		&kp APOS &kp SEMI &kp LBKT &kp LA(S) &kp BKSP 
 		&kp TAB    &kp SLASH    &kp BACKSLASH      &kp DQT     &kp APOS 		&kp LPAR &kp RPAR  &kp LBRC &kp RBRC  &kp ENTER 
-		&kp ESC    &kp QMARK 	&kp LA(S) &kp EQUAL &kp PIPE 	&kp LBKT &kp RBKT &kp COLON &kp RBKT  &kp ENTER 
+		&kp ESC    &kp RALT NUM_7 	&kp LA(S) &kp EQUAL &kp PIPE 	&kp LBKT &kp RBKT &kp COLON &kp RBKT  &kp ENTER 
 					    &kp AMPS  &bootloader					&bootloader &mo 2 
 		>;
 		};
