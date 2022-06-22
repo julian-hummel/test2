@@ -75,7 +75,7 @@
 		bindings = <
 		&kp EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCT		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
 		&kp TAB    &kp SLASH    &kp BACKSLASH      &kp DQT     &kp APOS 		&kp LPAR &kp RPAR  &kp LBRC &kp RBRC  &kp BKSP 
-		&kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp AMPS  &kp AMPS 	&kp LBKT &kp RBKT &kp COLON &kp RBKT  &kp ENTER 
+		&kp ESC    &kp TILDE 	&kp LA(S) &kp AMPS  &kp AMPS 	&kp LBKT &kp RBKT &kp COLON &kp RBKT  &kp ENTER 
 					    &bt BT_CLR  &bootloader					&bootloader &mo 2 
 		>;
 		};
