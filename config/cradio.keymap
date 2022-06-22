@@ -76,7 +76,7 @@
 		&mt QMARK EXCL  &kp AT    &kp HASH    &kp DLLR    &kp PRCT		&kp APOS &kp SEMI &kp LBKT &kp LA(S) &kp NUM_0 
 		&kp TAB    &kp SLASH    &kp BACKSLASH      &kp DQT     &kp APOS 		&kp LPAR &kp RPAR  &kp LBRC &kp RBRC  &kp BKSP 
 		&kp ESC    &kp QMARK 	&kp LA(S) &kp AMPS  &kp PIPE 	&kp LBKT &kp RBKT &kp COLON &kp RBKT  &kp ENTER 
-					    &bt BT_CLR  &bootloader					&bootloader &mo 2 
+					    &kp AMPS  &kp PIPE					&bootloader &mo 2 
 		>;
 		};
 		
@@ -84,8 +84,8 @@
 		bindings = <
 		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp PLUS  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
 		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp SCLN 			&kp MINUS &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
-		&kp LA(S)  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp STAR &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
-					  &mo 3 &kp LCTL  				&kp NUM_0  &mo 2 
+		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp STAR &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
+					  &mo 3 &bootloader  				&kp NUM_0  &mo 2 
 		>;
 		};	
 		
