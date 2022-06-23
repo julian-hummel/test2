@@ -74,7 +74,7 @@
        		left_layer {
 		bindings = <
 		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp HASH    &kp DLLR    &kp PRCT		&kp APOS &kp LBKT &kp SEMI &kp LA(S) &kp BKSP 
-		&kp TAB    &kp SLASH    &kp BACKSLASH      &kp PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
+		&kp TAB    &mt RA(MINUS) RS(NUM_7)    &kp BACKSLASH      &kp PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
 		&kp ESC    &kp RA(NUM_7) 	&kp LA(S) &kp RS(NUM_0) &kp LA(APOS) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp APOS &kp RS(APOS)  &kp ENTER 
 					    &kp AMPS  &bootloader					&bootloader &mo 2 
 		>;
