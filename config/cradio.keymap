@@ -75,16 +75,16 @@
 		bindings = <
 		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp HASH    &kp DLLR    &kp PRCT		&kp APOS &kp LBKT &kp SEMI &kp LA(S) &kp BKSP 
 		&kp TAB    &kp SLASH    &kp BACKSLASH      &kp PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
-		&kp ESC    &kp RA(NUM_7) 	&kp LA(S) &kp EQUAL &kp PIPE 	&kp RA(NUM_8) &kp RA(NUM_9) &kp COLON &kp RBKT  &kp ENTER 
+		&kp ESC    &kp RA(NUM_7) 	&kp LA(S) &kp RS(NUM_0) &kp LA(APOS) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp APOS &kp RS(APOS)  &kp ENTER 
 					    &kp AMPS  &bootloader					&bootloader &mo 2 
 		>;
 		};
 		
 		right_layer {
 		bindings = <
-		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp PLUS  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
-		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp SCLN 			&mt UNDER MINUS &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
-		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp STAR &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
+		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp RBKT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
+		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp SCLN 			&mt RS(SLASH) SLASH &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
+		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp RS(RBKT) &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
 					  &mo 3 &bootloader  				&kp NUM_0  &mo 2 
 		>;
 		};	
