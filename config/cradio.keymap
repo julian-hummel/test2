@@ -100,10 +100,10 @@
 		
 		colemak {
 		bindings = <
-		&mt &to 0 Q &kp W &kp F &kp P &kp B 						&kp J &kp L  &kp U &kp Y &kp LALT 
+		&kp Q &kp W &kp F &kp P &kp B 						&kp J &kp L  &kp U &kp Y &kp LALT 
 		&kp A &kp R &kp S &kp T &kp G 			      			&kp M &mt LCTRL N &mt LGUI E &kp I &kp O
 		&mt LSFT Z &kp X &kp C &kp D &kp V				        &kp K &kp H  &kp CMMA &kp DOT &kp LSFT 
-          				 &mo 2 &mt RS(SLASH) SLASH  		        &kp SPC &mo 1 
+          				 &mo 2 &to 0  		        &kp SPC &mo 1 
 		>;
 		};
         
