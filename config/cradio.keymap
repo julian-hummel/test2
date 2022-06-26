@@ -73,10 +73,10 @@
 
        		left_layer {
 		bindings = <
-		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &kp DLLR    &kp PRCT		&kp APOS &kp LBKT &kp SEMI &kp MINUS &kp BKSP 
+		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &kp DLLR    &kp PRCT		&to 0 &kp LBKT &kp SEMI &kp MINUS &kp BKSP 
 		&kp TAB    &mt RA(MINUS) RS(NUM_7)    &kp BACKSLASH      &kp PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
 		&kp ESC    &kp RA(NUM_7) 	&kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp NON_US_BSLH &kp PIPE2 &kp TAB 
-					    &kp AMPS  &bootloader					&bootloader &mo 2 
+					    &to 4  &bootloader					&bootloader &mo 2 
 		>;
 		};
 		
@@ -97,6 +97,15 @@
 					 &trans &trans  					&trans &trans 
 		>;
 		};	
+		
+		colemak {
+		bindings = <
+		&kp Q &kp W &kp F &kp P &kp B 						&kp J &kp L  &kp U &kp Y &kp LALT 
+		&kp A &kp R &kp S &kp T &kp G 			      			&kp M &mt LCTRL N &mt LGUI E &kp I &kp O
+		&mt LSFT Z &kp X &kp C &kp D &kp V				        &kp K &kp H  &kp CMMA &kp DOT &kp LSFT 
+          				 &mo 2 &mt RS(SLASH) SLASH  		        &kp SPC &mo 1 
+		>;
+		};
         
 	};
 };
