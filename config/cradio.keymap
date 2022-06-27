@@ -76,7 +76,7 @@
 		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &kp DLLR    &kp PRCT		&to 0 &kp LBKT &kp SEMI &kp MINUS &kp BKSP 
 		&kp TAB    &mt RA(MINUS) RS(NUM_7)    &kp BACKSLASH      &kp PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
 		&kp ESC    &kp RA(NUM_7) 	&kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp NON_US_BSLH &kp PIPE2 &kp TAB 
-					    &to 4  &bootloader					&bootloader &mo 2 
+					    &kp LS(NUM_6) &kp RS(NUM_0)				&trans &mo 2 
 		>;
 		};
 		
@@ -85,27 +85,18 @@
 		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp RBKT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
 		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp SCLN 			&mt RS(SLASH) SLASH &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
 		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp RS(RBKT) &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
-					  &mo 3 &bootloader  				&kp NUM_0  &mo 3 
+					  &mo 3 &trans  				&kp NUM_0  &mo 3 
 		>;
 		};	
 		
 		tri_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&trans &kp C_PREV   &kp C_PP   &kp C_NEXT  &trans
-		&kp F1 &kp F2 &kp F3 &kp F12 &kp F5  						&trans &kp PG_UP  &kp C_VOL_UP &kp C_MUTE &trans 
-		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp C_VOL_DN &trans &trans   
-					 &trans &trans  					&trans &trans 
+		&kp NUM_1  &kp NUM_2 &kp NUM_3 &kp NUM_4 &bootloader 			&bootloader &kp C_PREV   &kp C_PP   &kp C_NEXT  &trans
+		&kp F1 &kp F2 &kp F3 &kp F12 &kp &reset  				&reset &kp PG_UP  &kp C_VOL_UP &kp C_MUTE &trans 
+		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   			&trans &kp PG_DN  &kp C_VOL_DN &trans &trans   
+					 &trans &trans  				&trans &trans 
 		>;
 		};	
-		
-		colemak {
-		bindings = <
-		&kp Q &kp W &kp F &kp P &kp B 						&kp J &kp L  &kp U &kp Y &kp LALT 
-		&kp A &kp R &kp S &kp T &kp G 			      			&kp M &mt LCTRL N &mt LGUI E &kp I &kp O
-		&mt LSFT Z &kp X &kp C &kp D &kp V				        &kp K &kp H  &kp CMMA &kp DOT &kp LSFT 
-          				 &mo 2 &to 0  		        &kp SPC &mo 1 
-		>;
-		};
         
 	};
 };
