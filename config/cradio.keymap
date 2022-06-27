@@ -73,7 +73,7 @@
 
        		left_layer {
 		bindings = <
-		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &kp DLLR    &kp PRCT		&to 0 &kp LBKT &kp SEMI &kp MINUS &kp BKSP 
+		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &kp DLLR    &kp PRCT		&kp APOS &kp LBKT &kp SEMI &kp MINUS &kp BKSP 
 		&kp TAB    &mt RA(MINUS) RS(NUM_7)    &kp BACKSLASH      &kp PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
 		&kp ESC    &kp RA(NUM_7) 	&kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp NON_US_BSLH &kp PIPE2 &kp TAB 
 					    &kp LS(NUM_6) &kp RS(NUM_0)				&trans &mo 2 
