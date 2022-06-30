@@ -105,7 +105,7 @@
 		right_layer {
 		bindings = <
 		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp RBKT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
-		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp &mt RS(SLASH) SLASH 			&mt RS(SLASH) SLASH &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
+		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &mt RS(SLASH) SLASH 			&mt RS(SLASH) SLASH &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
 		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp RS(RBKT) &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
 					  &mo 3 &trans  				&kp NUM_0  &mo 3 
 		>;
