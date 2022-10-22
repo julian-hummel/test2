@@ -2,6 +2,7 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ * Author of the layout: Julian Hummel
  */
 
 #include <behaviors.dtsi>
@@ -39,11 +40,21 @@
             key-positions = <16 17>;
             bindings = <&kp LA(LSHIFT)>;
         };
-        
-	combo_ctrlaltleft {
+      
+      	/* Activates the selection with the mouse for an area to screenshot. 
+	The screenshot is copied to the clipboard. */
+	screenshot_copy_to_clipboard {
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp LG(LC(LS(NUM_4)))>;
+        };
+	
+	/* Activates the selection with the mouse for an area to screenshot. 
+	The screenshot is saved to the specified location. */
+	screenshot_with_save {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp LG(LS(NUM_4))>;
         };
 	
          combo_tab {
