@@ -80,6 +80,12 @@
             key-positions = <17 18>;
             bindings = <&kp RGUI>;
         };
+	
+	maximize_current_window {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp LS(LG(ENTER))>;
+        };
         
 
         
@@ -90,7 +96,7 @@
                 
        		default_layer {
 		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I &kp O &kp P 
+		&mt LS(LG(DOWN)) Q &mt LS(LG(UP)) W &kp E &kp R &kp T 						&kp Y &kp U  &kp I &kp O &kp P 
 		&kp A &kp S &kp D &kp F &kp G 			      			&kp H &mt LCTRL J &mt LGUI K &kp L &kp LALT
 		&kp Z &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt LS(CMMA) CMMA &mt LS(DOT) DOT &kp LSFT 
           				 &mo 2 &kp LSFT  		        	&kp SPC &mo 1 
