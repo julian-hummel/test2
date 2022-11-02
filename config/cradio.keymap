@@ -44,7 +44,7 @@
 	combo_rectangle {
             timeout-ms = <50>;
             key-positions = <6 7>;
-            bindings = <&kp LC(LSHIFT)>;
+            bindings = <&kp LG(LSHIFT)>;
         };
       
       	/* Activates the selection with the mouse for an area to screenshot. 
