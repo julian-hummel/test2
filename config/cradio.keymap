@@ -2,6 +2,7 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ * Author of the layout: Julian Hummel
  */
 
 #include <behaviors.dtsi>
@@ -10,20 +11,58 @@
 
 
 &mt {
-  //  flavor = "tap-preferred";
-   // tapping_term_ms = <200>;
+  flavor = "tap-preferred";
+  tapping_term_ms = <200>;
 };
 
 / { 
 
     combos {
         compatible = "zmk,combos";
+	/*
+                           KEY POSITIONS
+          ╭────────────────────╮ ╭────────────────────╮
+          │  0   1   2   3   4 │ │  5   6   7   8   9 │
+          │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
+          │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
+          ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
+                      ╰────────╯ ╰────────╯
+        */
+	
         combo_esc {
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
-        
+	
+	combo_ctrlaltright {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp LC(LSHIFT)>;
+        };
+	
+	combo_rectangle {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp LG(LSHIFT)>;
+        };
+      
+      	/* Activates the selection with the mouse for an area to screenshot. 
+	The screenshot is copied to the clipboard. */
+	screenshot_copy_to_clipboard {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp LG(LC(LS(NUM_4)))>;
+        };
+	
+	/* Activates the selection with the mouse for an area to screenshot. 
+	The screenshot is saved to the specified location. */
+	screenshot_with_save {
+            timeout-ms = <50>;
+            key-positions = <22 23>;
+            bindings = <&kp LG(LS(NUM_4))>;
+        };
+	
          combo_tab {
             timeout-ms = <50>;
             key-positions = <10 11>;
@@ -42,17 +81,16 @@
             bindings = <&kp LALT>;
         };
         
-                           combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
-        
-        
            combo_rgui {
             timeout-ms = <50>;
             key-positions = <17 18>;
             bindings = <&kp RGUI>;
+        };
+	
+	to_last_layer {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&mo 3>;
         };
         
 
@@ -64,37 +102,37 @@
                 
        		default_layer {
 		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I    &kp O   &kp P 
-		&kp A &kp S &kp D &kp F &kp G 			        	        &kp H &kp J &kp K &kp L &kp QUOT
-		&mt LSFT Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
-          				&mo 1 &kp LCTL  				&kp SPC &mo 2 
+		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I &kp O &kp P 
+		&kp A &kp S &kp D &kp F &kp G 			      			&kp H &mt LCTRL J &mt LGUI K &kp L &kp LALT
+		&kp Z &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt LS(CMMA) CMMA &mt LS(DOT) DOT &kp LSFT 
+          				 &mo 2 &kp LSFT  		        	&kp SPC &mo 1 
 		>;
 		};
 
        		left_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
-		&kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH 		&kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL 
-		&kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL 
-					    &mo 1  &kp LGUI  					&kp RGUI &mo 2 
+		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &kp APOS  &kp PRCT		&kp APOS &kp LBKT &kp SEMI &kp MINUS &kp BKSP 
+		&kp TAB    &mt RA(MINUS) RS(NUM_7)    &mt LA(RBKT) DLLR      &mt LS(EQL) PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
+		&kp ESC    &mt PIPE2 NON_US_BSLH &kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp GRAVE &kp LS(GRAVE) &kp TAB 
+					    &mt RA(GRAVE) LS(NUM_6) &kp RS(NUM_0)				&trans &mo 2 
 		>;
 		};
 		
 		right_layer {
 		bindings = <
-		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp RPRN 
-		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					  &mo 3 &kp LCTL  				&kp SPC  &mo 2 
+		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp RBKT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
+		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &mt RS(SLASH) SLASH 			&mt RS(SLASH) SLASH &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
+		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp RS(RBKT) &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
+					  &mo 3 &trans  				&kp NUM_0  &mo 3 
 		>;
 		};	
 		
 		tri_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&trans &trans   &trans   &trans  &trans
-		&kp F1 &kp F2 &kp F3 &kp F4 &kp F5  						&trans &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans 
-		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
-					 &trans &trans  					&trans &trans 
+		&kp NUM_1  &kp NUM_2 &kp NUM_3 &kp NUM_4 &bootloader 			&bootloader &kp C_PREV   &kp C_PP   &kp C_NEXT  &trans
+		&kp TAB &kp F2 &kp F3 &kp F12 &kp &reset  				&reset &kp PG_UP  &kp C_VOL_UP &kp C_MUTE &trans 
+		&bt BT_CLR  &bt BT_PRV &bt BT_NXT &kp F6 &kp F7   			&trans &kp PG_DN  &kp C_VOL_DN &trans &trans   
+					 &trans &trans  				&trans &trans 
 		>;
 		};	
         
