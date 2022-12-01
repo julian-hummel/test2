@@ -106,7 +106,7 @@
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp U>
 		, <&macro_release &kp LALT>
-		, <&macro_tap &kp o>
+		, <&macro_tap &kp O>
                 ;
         };
     };
