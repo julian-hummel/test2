@@ -96,13 +96,27 @@
 
         
     };
+    
+    macros {
+        test: test {
+            label = "test";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp U>
+		, <&macro_release &kp LALT>
+		, <&macro_tap &kp o>
+                ;
+        };
+    };
 
         keymap {
                 compatible = "zmk,keymap";
                 
        		default_layer {
 		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I &kp O &kp P 
+		&kp Q &kp W &kp E &kp R &kp T 						&test &kp U  &kp I &kp O &kp P 
 		&kp A &kp S &kp D &kp F &kp G 			      			&kp H &mt LGUI J &mt LCTRL K &kp L &kp LALT
 		&kp Z &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt LS(CMMA) CMMA &mt LS(DOT) DOT &kp LSFT 
           				 &mo 2 &kp LSFT  		        	&kp SPC &mo 1 
