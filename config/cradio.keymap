@@ -124,13 +124,8 @@
             label = "german_ue";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp U>
-		, <&macro_release &kp LALT>
-		, <&macro_tap &kp U>
-                ;
-        };
+            bindings = <&macro_tap &kp LA(U) &kp U>;
+        }; 
     };
 
         keymap {
