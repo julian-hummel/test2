@@ -108,7 +108,7 @@
             label = "german_ae";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &mt german_ue_b german_ue>;
+            bindings = <&macro_tap &kp LA(U) &mt LS(A) A>;
         };
 	german_ue: german_ue {
             label = "german_ue";
