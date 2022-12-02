@@ -98,8 +98,8 @@
     };
     
     macros {
-        test: test {
-            label = "test";
+        german_oe: german_oe {
+            label = "german_oe";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -109,6 +109,28 @@
 		, <&macro_tap &kp O>
                 ;
         };
+	german_ae: german_ae {
+            label = "german_ae";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp U>
+		, <&macro_release &kp LALT>
+		, <&macro_tap &kp A>
+                ;
+        };
+	german_ue: german_ue {
+            label = "german_ue";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp U>
+		, <&macro_release &kp LALT>
+		, <&macro_tap &kp U>
+                ;
+        };
     };
 
         keymap {
@@ -116,16 +138,16 @@
                 
        		default_layer {
 		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&test &kp U  &kp I &kp O &kp P 
+		&kp Q &kp W &kp E &kp R &kp T 						&kp Z &kp U  &kp I &kp O &kp P 
 		&kp A &kp S &kp D &kp F &kp G 			      			&kp H &mt LGUI J &mt LCTRL K &kp L &kp LALT
-		&kp Z &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt LS(CMMA) CMMA &mt LS(DOT) DOT &kp LSFT 
+		&kp Y &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt LS(CMMA) CMMA &mt LS(DOT) DOT &kp LSFT 
           				 &mo 2 &kp LSFT  		        	&kp SPC &mo 1 
 		>;
 		};
 
        		left_layer {
 		bindings = <
-		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &kp APOS  &kp PRCT		&kp APOS &kp LBKT &kp SEMI &kp MINUS &kp BKSP 
+		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &german_ae  &kp PRCT		&german_ae &german_ue &german_oe &kp LA(S) &kp BKSP 
 		&kp TAB    &mt RA(MINUS) RS(NUM_7)    &mt LA(RBKT) DLLR      &mt LS(EQL) PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
 		&kp ESC    &mt PIPE2 NON_US_BSLH &kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp GRAVE &kp LS(GRAVE) &kp TAB 
 					    &mt RA(GRAVE) LS(NUM_6) &kp RS(NUM_0)				&trans &mo 2 
