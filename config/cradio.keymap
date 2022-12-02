@@ -108,7 +108,7 @@
             label = "german_ae";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LA(U) &mt LS(A) A>;
+            bindings = <&macro_tap &kp LA(U) &kp A>;
         };
 	german_ue: german_ue {
             label = "german_ue";
@@ -128,7 +128,7 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LA(U) &kp LS(O)>;
         }; 
-	german_ae_b: german_ade_b {
+	german_ae_b: german_ae_b {
             label = "german_ae_b";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -144,14 +144,14 @@
             tapping-term-ms = <200>;
             bindings = <&german_ue>, <&german_ue_b>;
         };
-	tap_oe: tap_dance_0 {
+	tap_oe: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&german_oe>, <&german_oe_b>;
         };
-	tap_ae: tap_dance_0 {
+	tap_ae: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
