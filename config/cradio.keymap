@@ -125,16 +125,12 @@
     };
     
     behaviors {
-    	ue: ue {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ue";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
-            // hold does not work
-            bindings = <&german_ue_b, <&german_ue>;
+    	td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
         };
     };
 
@@ -152,7 +148,7 @@
 
        		left_layer {
 		bindings = <
-		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &german_ae  &kp PRCT		&ue 0 0 &german_ue_b &german_oe &kp LA(S) &kp BKSP 
+		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &german_ae  &kp PRCT		&td0 &german_ue_b &german_oe &kp LA(S) &kp BKSP 
 		&kp TAB    &mt RA(MINUS) RS(NUM_7)    &mt LA(RBKT) DLLR      &mt LS(EQL) PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
 		&kp ESC    &mt PIPE2 NON_US_BSLH &kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp GRAVE &kp LS(GRAVE) &kp TAB 
 					    &mt RA(GRAVE) LS(NUM_6) &kp RS(NUM_0)				&trans &mo 2 
