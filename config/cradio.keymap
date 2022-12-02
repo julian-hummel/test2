@@ -102,37 +102,37 @@
             label = "german_oe";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LA(U) &kp O>;
+            bindings = <&macro_tap &kp DQT &kp O>;
         };
 	german_ae: german_ae {
             label = "german_ae";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LA(U) &kp A>;
+            bindings = <&macro_tap &kp DQT &kp A>;
         };
 	german_ue: german_ue {
             label = "german_ue";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LA(U) &kp U>;
+            bindings = <&macro_tap &kp DQT &kp U>;
         }; 
 	german_ue_b: german_ue_b {
             label = "german_ue_b";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LA(U) &kp LS(U)>;
+            bindings = <&macro_tap &kp DQT &kp LS(U)>;
         }; 
 	german_oe_b: german_oe_b {
             label = "german_oe_b";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LA(U) &kp LS(O)>;
+            bindings = <&macro_tap &kp DQT &kp LS(O)>;
         }; 
 	german_ae_b: german_ae_b {
             label = "german_ae_b";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LA(U) &kp LS(A)>;
+            bindings = <&macro_tap &kp DQT &kp LS(A)>;
         }; 
     };
     
