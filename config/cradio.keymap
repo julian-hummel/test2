@@ -170,7 +170,14 @@
             label = "Activate_Bootloader_Right";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSFT>, <&bootloader>;
+            bindings = <&kp P>, <&bootloader>;
+        };
+	copy: copy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "copy";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&kp LC(C)>;
         };
     };
 
@@ -179,9 +186,9 @@
                 
        		default_layer {
 		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Z &kp U  &kp I &kp O &kp P 
+		&kp Q &kp W &kp E &kp R &kp T 						&kp Z &kp U  &kp I &kp O &kp &blda_r 
 		&kp A &kp S &kp D &kp F &kp G 			      			&kp H &mt LGUI J &mt LCTRL K &kp L &kp LALT
-		&blda_l &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt LS(CMMA) CMMA &mt LS(DOT) DOT &blda_r 
+		&blda_l &kp X &copy &kp V &kp B				        &kp M &kp N  &mt LS(CMMA) CMMA &mt LS(DOT) DOT &kp LSFT 
           				 &mo 2 &kp LSFT  		        	&kp SPC &mo 1 
 		>;
 		};
@@ -189,7 +196,7 @@
        		left_layer {
 		bindings = <
 		&mt QMARK EXCL &kp AT &kp HASH &tap_ae  &kp PRCT				&tap_ae &tap_ue &tap_oe &kp LA(S) &kp BKSP 
-		&kp TAB &mt BSLH SLASH &mt TILDE2 DLLR &mt GRAVE SQT &kp DQT 			&kp LPAR &kp RPAR &kp LBRC &kp RBRC &kp ENTER 
+		&kp TAB &mt BSLH SLASH &mt TILDE DLLR &mt GRAVE SQT &kp DQT 			&kp LPAR &kp RPAR &kp LBRC &kp RBRC &kp ENTER 
 		&kp ESC &kp CARET &kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 		&kp LBKT &kp RBKT &kp LT &kp GT &kp TAB 
 					    &mt PIPE AMPS &kp EQUAL				&trans &mo 2 
 		>;
@@ -197,9 +204,9 @@
 		
 		right_layer {
 		bindings = <
-		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp RBKT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
-		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &mt RS(SLASH) SLASH 			&mt RS(SLASH) SLASH &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
-		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp RS(RBKT) &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
+		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp PLUS  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
+		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &mt LS(MINUS) MINUS		&mt LS(MINUS) MINUS &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
+		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp STAR &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
 					  &mo 3 &trans  				&kp NUM_0  &mo 3 
 		>;
 		};	
