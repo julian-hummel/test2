@@ -141,35 +141,35 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
             bindings = <&german_ue>, <&german_ue_b>;
         };
 	tap_oe: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
             bindings = <&german_oe>, <&german_oe_b>;
         };
 	tap_ae: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
             bindings = <&german_ae>, <&german_ae_b>;
         };
 	blda_l: bootloader_activation_left {
             compatible = "zmk,behavior-tap-dance";
             label = "Activate_Bootloader_Left";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <1500>;
             bindings = <&kp Y>, <&bootloader>;
         };
 	blda_r: bootloader_activation_right {
             compatible = "zmk,behavior-tap-dance";
             label = "Activate_Bootloader_Right";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp P>, <&bootloader>;
         };
     };
