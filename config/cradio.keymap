@@ -109,19 +109,22 @@
             label = "german_ae";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp DQT &kp A>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp A>;
         };
 	german_ue: german_ue {
             label = "german_ue";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp DQT &kp U>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp U>;
         }; 
 	german_ue_b: german_ue_b {
             label = "german_ue_b";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp DQT &kp LS(U)>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp LS(U)>;
         }; 
 	german_oe_b: german_oe_b {
             label = "german_oe_b";
@@ -134,7 +137,8 @@
             label = "german_ae_b";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp DQT &kp LS(A)>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp LS(A)>;
         }; 
     };
     
@@ -143,35 +147,35 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&german_ue>, <&german_ue_b>;
         };
 	tap_oe: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&german_oe>, <&german_oe_b>;
         };
 	tap_ae: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&german_ae>, <&german_ae_b>;
         };
 	blda_l: bootloader_activation_left {
             compatible = "zmk,behavior-tap-dance";
             label = "Activate_Bootloader_Left";
             #binding-cells = <0>;
-            tapping-term-ms = <1500>;
+            tapping-term-ms = <250>;
             bindings = <&kp Y>, <&bootloader>;
         };
 	blda_r: bootloader_activation_right {
             compatible = "zmk,behavior-tap-dance";
             label = "Activate_Bootloader_Right";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp P>, <&bootloader>;
         };
     };
