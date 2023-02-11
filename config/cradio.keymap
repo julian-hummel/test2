@@ -52,7 +52,7 @@
 	screenshot_copy_to_clipboard {
             timeout-ms = <50>;
             key-positions = <12 13>;
-            bindings = <&kp LG(LC(LS(NUM_4)))>;
+            bindings = <&kp LG(LS(S))>;
         };
 	
 	/* Activates the selection with the mouse for an area to screenshot. 
@@ -164,20 +164,6 @@
             tapping-term-ms = <250>;
             bindings = <&german_ae>, <&german_ae_b>;
         };
-	blda_l: bootloader_activation_left {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Activate_Bootloader_Left";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp Y>, <&bootloader>;
-        };
-	blda_r: bootloader_activation_right {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Activate_Bootloader_Right";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp P>, <&bootloader>;
-        };
     };
 
         keymap {
@@ -186,8 +172,8 @@
        		default_layer {
 		bindings = <
 		&kp Q &kp W &kp E &kp R &kp T 						&kp Z &kp U  &kp I &kp O &kp P
-		&kp A &kp S &kp D &kp F &kp G 			      			&kp H &mt LGUI J &mt LCTRL K &kp L &kp LALT
-		&blda_l &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt SEMI CMMA &mt COLON DOT &kp LSFT 
+		&kp A &kp S &kp D &mt LCTRL F &kp G 			      			&kp H &mt LGUI J &mt LCTRL K &kp L &kp LALT
+		&kp Y &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt SEMI CMMA &mt COLON DOT &kp LSFT 
           				 &mo 2 &kp LSFT  		        	&kp SPC &mo 1 
 		>;
 		};
