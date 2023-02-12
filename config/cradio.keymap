@@ -38,13 +38,7 @@
 	combo_ctrlaltright {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp LC(LSHIFT)>;
-        };
-	
-	combo_rectangle {
-            timeout-ms = <50>;
-            key-positions = <6 7>;
-            bindings = <&kp LG(LSHIFT)>;
+            bindings = <&kp LA(LSHIFT)>;
         };
       
       	/* Activates the selection with the mouse for an area to screenshot. 
@@ -52,7 +46,7 @@
 	screenshot_copy_to_clipboard {
             timeout-ms = <50>;
             key-positions = <12 13>;
-            bindings = <&kp LG(LS(S))>;
+            bindings = <&kp LG(LC(LS(NUM_4)))>;
         };
 	
 	/* Activates the selection with the mouse for an area to screenshot. 
