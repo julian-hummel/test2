@@ -38,10 +38,10 @@
 	combo_ctrlaltright {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp LC(LSHIFT)>;
+            bindings = <&kp LA(LSHIFT)>;
         };
 	
-	combo_switch_screen {
+	switch_screens {
             timeout-ms = <50>;
             key-positions = <6 7>;
             bindings = <&kp LG(LS(LEFT))>;
@@ -96,33 +96,102 @@
 
         
     };
+    
+    macros {
+        german_oe: german_oe {
+            label = "german_oe";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp O>;
+        };
+	german_ae: german_ae {
+            label = "german_ae";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp A>;
+        };
+	german_ue: german_ue {
+            label = "german_ue";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp U>;
+        }; 
+	german_ue_b: german_ue_b {
+            label = "german_ue_b";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp LS(U)>;
+        }; 
+	german_oe_b: german_oe_b {
+            label = "german_oe_b";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp LS(O)>;
+        }; 
+	german_ae_b: german_ae_b {
+            label = "german_ae_b";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap_time 0>
+	    	      ,<&macro_tap &kp DQT &kp LS(A)>;
+        }; 
+    };
+    
+    behaviors {
+    	tap_ue: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&german_ue>, <&german_ue_b>;
+        };
+	tap_oe: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&german_oe>, <&german_oe_b>;
+        };
+	tap_ae: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&german_ae>, <&german_ae_b>;
+        };
+    };
 
         keymap {
                 compatible = "zmk,keymap";
                 
        		default_layer {
 		bindings = <
-		&kp Q &kp W &kp E &kp R &kp T 						&kp Z &kp U  &kp I &kp O &kp P 
+		&kp Q &kp W &kp E &kp R &kp T 						&kp Z &kp U  &kp I &kp O &kp P
 		&kp A &kp S &kp D &mt LCTRL F &kp G 			      			&kp H &mt LGUI J &mt LCTRL K &kp L &kp LALT
-		&kp Y &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt LS(CMMA) CMMA &mt LS(DOT) DOT &kp LSFT 
+		&kp Y &kp X &kp C &kp V &kp B				        &kp M &kp N  &mt SEMI CMMA &mt COLON DOT &kp LSFT 
           				 &mo 2 &kp LSFT  		        	&kp SPC &mo 1 
 		>;
 		};
 
        		left_layer {
 		bindings = <
-		&mt RS(MINUS) EXCL  &kp RA(Q)    &kp BACKSLASH    &kp APOS  &kp PRCT		&kp APOS &kp LBKT &kp SEMI &kp MINUS &kp BKSP 
-		&kp TAB    &mt RA(MINUS) RS(NUM_7)    &mt LA(RBKT) DLLR      &mt LS(EQL) PIPE &kp RS(NUM_2) 	&kp LS(NUM_8) &kp LS(NUM_9) &kp RA(NUM_7) &kp RA(NUM_0) &kp ENTER 
-		&kp ESC    &mt PIPE2 NON_US_BSLH &kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 	&kp RA(NUM_8) &kp RA(NUM_9) &kp GRAVE &kp LS(GRAVE) &kp TAB 
-					    &mt RA(GRAVE) LS(NUM_6) &kp RS(NUM_0)				&trans &mo 2 
+		&mt QMARK EXCL &kp AT &kp HASH &tap_ae  &kp PRCT				&tap_ae &tap_ue &tap_oe &kp LA(S) &kp BKSP 
+		&kp TAB &mt BSLH SLASH &mt TILDE DLLR &mt GRAVE SQT &kp DQT 			&kp LPAR &kp RPAR &kp LBRC &kp RBRC &kp ENTER 
+		&kp ESC &kp CARET &kp LA(S) &kp RS(NUM_0) &kp LS(NUM_6) 		&kp LBKT &kp RBKT &kp LT &kp GT &kp TAB 
+					    &mt PIPE AMPS &kp EQUAL				&trans &mo 2 
 		>;
 		};
 		
 		right_layer {
 		bindings = <
-		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp RBKT  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
-		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &mt RS(SLASH) SLASH 			&mt RS(SLASH) SLASH &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
-		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp RS(RBKT) &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
+		&kp APOS &kp SEMI &kp UP  &kp DLLR  &kp PRCT    			&kp PLUS  &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RPRN 
+		&kp LBKT  &kp LEFT  &kp DOWN  &kp RIGHT  &mt LS(MINUS) MINUS		&mt LS(MINUS) MINUS &kp NUM_4  &kp NUM_5  &kp NUM_6   &kp BKSP
+		&bt BT_CLR  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp STAR &kp NUM_1 &kp NUM_2 &kp NUM_3  &kp RIGHT
 					  &mo 3 &trans  				&kp NUM_0  &mo 3 
 		>;
 		};	
