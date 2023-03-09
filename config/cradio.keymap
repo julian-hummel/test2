@@ -38,7 +38,7 @@
 	combo_ctrlaltright {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp LA(LSHIFT)>;
+            bindings = <&kp LC(LSHIFT)>;
         };
 	
 	switch_screens {
@@ -69,11 +69,7 @@
             bindings = <&kp TAB>;
         };
         
-            combo_ralt {
-            timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
-        };
+        
         
                     combo_lalt {
             timeout-ms = <50>;
