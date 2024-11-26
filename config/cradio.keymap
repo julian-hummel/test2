@@ -2,7 +2,7 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
- * Author of the layout: Julian Hummel
+ * Author of the layout is: Julian Hummel
  */
 
 #include <behaviors.dtsi>
